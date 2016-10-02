@@ -1,3 +1,17 @@
-= block_issue_content
+= Redmine plugin: Block Issue Content
 
-Description goes here
+This is a Redmine plugin to block the view of issue content.
+
+== Installation
+
+1. Download or clone a folder from GitHub (https://github.com/tkusukawa/block_issue_content/releases)
+2. Move the folder into the $REDMINE/plugins/
+3. Restart REDMINE
+
+== Usage
+
+Set the permission of block_issue_content
+1. Click Top Menu [Administration]
+2. Click [Roles and permissions]
+3. Select a Role to block view of issue content
+4. Click check box of block_issue_content that is in the [Issue tracking]
