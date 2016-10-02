@@ -10,12 +10,10 @@ module BlockIssueContentIssuePatch
 
   module InstanceMethods
     def visible_with_block_issue_content?(usr=nil)
-      p caller
-      visible = visible_without_block_issue_content?(usr)
-      return false unless visible
 
-      block = (usr || User.current).allowed_to?(:block_view_issue_content, self.project)
-      return false if block
+      return false unless visible_without_block_issue_content?(usr)
+      return true if (usr || User.current).admin?
+      return false if (usr || User.current).allowed_to?(:block_view_issue_content, self.project)
 
       return true
     end

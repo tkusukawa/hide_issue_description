@@ -1,6 +1,7 @@
 = Redmine plugin: Block Issue Content
 
-This is a Redmine plugin to block the view of issue content.
+This plugin add a new permission that block the view of issue content.
+Users with this Permission can see a list of the Issues, but can not display the individual Issue.
 
 == Installation
 

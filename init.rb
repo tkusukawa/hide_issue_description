@@ -12,7 +12,7 @@ Redmine::Plugin.register :block_issue_content do
   name 'Block Issue Content plugin'
   author 'Tomohisa Kusukawa'
   description 'Redmine plugin to block the view of issue content'
-  version '0.0.1'
+  version '0.0.2'
   url 'https://github.com/tkusukawa/block_issue_content'
   author_url 'https://github.com/tkusukawa'
 
