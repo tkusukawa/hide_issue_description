@@ -1,18 +1,18 @@
-= Redmine plugin: Block Issue Content
+= Redmine plugin: Hide Issue Description
 
-This plugin add a new permission that block the view of issue content.
+This plugin add a new permission that hide the view of issue description.
 Users with this Permission can see a list of the Issues, but can not display the individual Issue.
 
 == Installation
 
-1. Download or clone a folder from GitHub (https://github.com/tkusukawa/block_issue_content/releases)
+1. Download or clone a folder from GitHub (https://github.com/tkusukawa/hide_issue_description/releases)
 2. Move the folder into the $REDMINE/plugins/
 3. Restart REDMINE
 
 == Usage
 
-Set the permission of block_issue_content
+Set the permission of hide_issue_description
 1. Click Top Menu [Administration]
 2. Click [Roles and permissions]
-3. Select a Role to block view of issue content
-4. Click check box of block_issue_content that is in the [Issue tracking]
+3. Select a Role to hide view of issue description
+4. Click check box of hide_issue_description that is in the [Issue tracking]

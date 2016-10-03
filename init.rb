@@ -1,26 +1,26 @@
 require 'redmine'
 
-require_dependency 'block_issue_content_issue_patch'
-require_dependency 'block_issue_content_query_patch'
+require_dependency 'hide_issue_description_issue_patch'
+require_dependency 'hide_issue_description_query_patch'
 
 Rails.configuration.to_prepare do
-  unless Issue.included_modules.include?(BlockIssueContentIssuePatch)
-    Issue.send(:include, BlockIssueContentIssuePatch)
+  unless Issue.included_modules.include?(HideIssueDescriptionIssuePatch)
+    Issue.send(:include, HideIssueDescriptionIssuePatch)
   end
-  unless Query.included_modules.include?(BlockIssueContentQueryPatch)
-    Query.send(:include, BlockIssueContentQueryPatch)
+  unless Query.included_modules.include?(HideIssueDescriptionQueryPatch)
+    Query.send(:include, HideIssueDescriptionQueryPatch)
   end
 end
 
-Redmine::Plugin.register :block_issue_content do
-  name 'Block Issue Content plugin'
+Redmine::Plugin.register :hide_issue_description do
+  name 'Hide Issue Description plugin'
   author 'Tomohisa Kusukawa'
-  description 'Redmine plugin to block the view of issue content'
-  version '0.0.3'
-  url 'https://github.com/tkusukawa/block_issue_content'
+  description 'Redmine plugin to hide the view of issue description'
+  version '0.0.4'
+  url 'https://github.com/tkusukawa/hide_issue_description'
   author_url 'https://github.com/tkusukawa'
 
   project_module :issue_tracking do
-    permission :block_view_issue_content, {}
+    permission :hide_view_issue_description, {}
   end
 end
